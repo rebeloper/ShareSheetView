@@ -12,8 +12,13 @@ public struct ShareSheetButton: View {
     
     @State private var isPresented = false
     
-    public var shareSheetView: () -> ShareSheetView
-    public var label: () -> AnyView
+    private var shareSheetView: () -> ShareSheetView
+    private var label: () -> AnyView
+    
+    public init(shareSheetView: @escaping () -> ShareSheetView, label: @escaping () -> AnyView) {
+        self.shareSheetView = shareSheetView
+        self.label = label
+    }
     
     public var body: some View {
         Button {
