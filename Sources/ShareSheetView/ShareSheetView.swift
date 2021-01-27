@@ -26,7 +26,6 @@ public struct ShareSheetView: UIViewControllerRepresentable {
         let controller = UIActivityViewController(
             activityItems: activityItems,
             applicationActivities: applicationActivities)
-        controller.modalPresentationStyle = .pageSheet
         controller.excludedActivityTypes = excludedActivityTypes
         controller.completionWithItemsHandler = callback
         return controller
