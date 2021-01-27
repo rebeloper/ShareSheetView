@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ShareSheetView: UIViewControllerRepresentable {
-    typealias Callback = (_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ error: Error?) -> Void
+public struct ShareSheetView: UIViewControllerRepresentable {
+    public typealias Callback = (_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ error: Error?) -> Void
     
-    let activityItems: [Any]
-    let applicationActivities: [UIActivity]? = nil
-    let excludedActivityTypes: [UIActivity.ActivityType]? = nil
-    let callback: Callback? = nil
+    public let activityItems: [Any]
+    public let applicationActivities: [UIActivity]? = nil
+    public let excludedActivityTypes: [UIActivity.ActivityType]? = nil
+    public let callback: Callback? = nil
     
-    func makeUIViewController(context: Context) -> UIActivityViewController {
+    public func makeUIViewController(context: Context) -> UIActivityViewController {
         let controller = UIActivityViewController(
             activityItems: activityItems,
             applicationActivities: applicationActivities)
@@ -25,5 +25,5 @@ struct ShareSheetView: UIViewControllerRepresentable {
         return controller
     }
     
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) { }
+    public func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) { }
 }
