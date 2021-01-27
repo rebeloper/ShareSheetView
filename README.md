@@ -16,7 +16,7 @@ https://github.com/rebeloper/ShareSheetView.git
 Download and include the `ShareSheetView` folder and files in your codebase.
 
 ### 📲 Requirements
-- iOS 14+
+- iOS 13+
 - Swift 5.3+
 
 ## 👉 Import
